@@ -646,6 +646,14 @@ $(document).ready(function(){
 			// Send current top p value to input
 			$("#settopp").val(parseFloat(msg.data));
 			$("#settoppcur").html(msg.data);
+		} else if(msg.cmd == "updatetopk") {
+			// Send current top k value to input
+			$("#settopk").val(parseFloat(msg.data));
+			$("#settopkcur").html(msg.data);
+		} else if(msg.cmd == "updatetfs") {
+			// Send current tfs value to input
+			$("#settfs").val(parseFloat(msg.data));
+			$("#settfscur").html(msg.data);
 		} else if(msg.cmd == "updatereppen") {
 			// Send current rep pen value to input
 			$("#setreppen").val(parseFloat(msg.data));
@@ -668,6 +676,12 @@ $(document).ready(function(){
 		} else if(msg.cmd == "setlabeltopp") {
 			// Update setting label with value from server
 			$("#settoppcur").html(msg.data);
+		} else if(msg.cmd == "setlabeltopk") {
+			// Update setting label with value from server
+			$("#settopkcur").html(msg.data);
+		} else if(msg.cmd == "setlabeltfs") {
+			// Update setting label with value from server
+			$("#settfscur").html(msg.data);
 		} else if(msg.cmd == "setlabelreppen") {
 			// Update setting label with value from server
 			$("#setreppencur").html(msg.data);
