@@ -579,8 +579,7 @@ $(document).ready(function(){
 	seqselcontents    = $("#seqselcontents");
 	
     // Connect to SocketIO server
-	loc    = window.document.location;
-    socket = io.connect(loc.href);
+    socket = io.connect(window.document.origin);
 	
 	socket.on('from_server', function(msg) {
         if(msg.cmd == "connected") {
